@@ -8,13 +8,11 @@
   <style>
     * {margin:0px; padding:0px; box-sizing: border-box;}
     body {overflow-x: hidden;}
+    
   </style>
 </head>
 <body>
   <script>
-
-// body.style.cssText="overflow-x: hidden"
-// 여기에 쓰면 뒤에 코드 전부 안보임. 
 
 //------------aside------------
 const aside = document.createElement('aside');
@@ -53,7 +51,7 @@ main.appendChild(sectionL);
 sectionL.setAttribute('id','left-sect');
 sectionL.style.cssText=
 "display:flex; justify-content: center;align-items: center; width:200px;height:450px; border: 1px soild black; "
-/* 왜????????이것만 왜 border 가 안나올까?????????? */ 
+/* 왜????????이것만 테두리가 안나올까?????????? */ 
 
 
 
@@ -123,6 +121,8 @@ sectionR.style.cssText=
 // -------sectiond의 자식 ul -------
 const ulR = document.createElement('ul');
 sectionR.appendChild(ulR);
+
+
 
   </script>
 </body>
