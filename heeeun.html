@@ -8,7 +8,7 @@
   <style>
     * {margin:0px; padding:0px; box-sizing: border-box;}
     body {overflow-x: hidden;}
-    ul {list-style-type: none;}
+    
   </style>
 </head>
 <body>
@@ -22,12 +22,10 @@ aside.style.cssText="display:flex;justify-content: center; align-items: center;w
 
 
 
-
 //-------------move! ------------ 
 const h1 = document.createElement('h1');
 aside.appendChild(h1);
 h1.textContent="move!";
-
 
 
 
@@ -39,17 +37,11 @@ div.style.cssText=
 "background-color:cadetblue; width:100vw; height:100vh;display:flex;justify-content: center; align-items: center; "
 
 
-
-
 //---------main ------------
 const main = document.createElement('main');
 div.appendChild(main);
 main.style.cssText=
 "width: 500px; height: 500px; border: 1px dotted black;display:flex;justify-content: center;align-items: center; "
-
-
-
-
 
 
 
@@ -59,14 +51,14 @@ main.appendChild(sectionL);
 sectionL.setAttribute('id','left-sect');
 sectionL.style.cssText=
 "display:flex; justify-content: center;align-items: center; width:200px;height:450px; border: 1px soild black; "
-/* 왜????????이것만 테두리가 안나올까 */ 
-
+/* 왜????????이것만 테두리가 안나올까?????????? */ 
 
 
 
 // ------ul 생성 ----------------- 
 const ul = document.createElement('ul');
 sectionL.appendChild(ul);
+ul.style.cssText="list-style-type: none;"
 
 
 //-------ul의 자식 li 5번반복 해야함 ----------
@@ -131,7 +123,6 @@ const ulR = document.createElement('ul');
 sectionR.appendChild(ulR);
 
 
-// /section , /main , /div 
 
   </script>
 </body>
