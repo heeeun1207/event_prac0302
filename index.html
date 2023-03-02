@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <div id="root">   
+        <!-- #root>ul>li{items-$}*5 -->
+      <ul id="menu">
+        <li>items-1</li>
+        <li>items-2</li>
+        <li>items-3</li>
+        <li>items-4</li>
+        <li>items-5</li>  
+        <!-- list 이상의 정보는 없는 정적인 문서  -->
+      </ul>
+    </div>
+    <script>
+      const menu = document.getElementById('menu');
+      const firstli = document.querySelector('#menu > li:nth-child(1)');
+      //쓰는 방식 한번 오늘 다시봐보자 . 쿼리셀렉터 
+      console.log(firstli);
+
+
+      console.dir(menu.children); // 커맨드 +f로 찾아봐  0번째자식을 찾고싶어 . 
+      menu.children[0].style.color = "pink";  //내마음대로 추적이가능하다. 
+      // 외우지 말고 함수를 사용했다면, console (return)값을 확인한다
+      menu.children[1].style.color = "pink";
+      menu.children[2].style.color = "pink";
+      menu.children[3].style.color = "pink";
+      menu.children[4].style.color = "pink";
+      //일딴 써보고 반복되는 패턴을 봐바 -> +1만 하면 코드를 줄일수 있을텐데? 
+      
+
+      for(let i = 0; i<menu.children.length; i++) {
+        menu.children[i].style.color= "tomato";
+      }
+      // for(let i= menu.children.length; i>0; i--);{} 
+      //암기만 하지말고 이해해보자 이건 5,4,3,2,1 로 되는 순서를 말한거고 결과는 같음. 
+      //반복문은 시작점과 끝점만 있으면 실행된다.  
+
+      //3 클릭하면 3번째만 파란색으로 바뀌게 해보자 .
+      menu.children[2].addEventListener('click',function(){
+        menu.children[2].style.color = "green";   });
+
+
+
+
+    </script>
+</body>
+</html>
