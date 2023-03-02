@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {margin:0px; padding:0px; box-sizing: border-box;}
+  </style>
+</head>
+<body>
+  <script>
+//------------move-btn------------
+const aside = document.createElement('aside');
+document.body.appendChild(aside); 
+aside.setAttribute('id', 'move-btn'); 
+
+
+
+
+
+
+
+//-------------move! ------------ 
+const h1 = document.createElement('h1');
+aside.appendChild(h1);
+h1.textContent="move!";
+
+
+
+
+
+
+
+
+//------------div id root -------
+const div = document.createElement('div');
+document.body.appendChild(div); 
+div.setAttribute('id', 'root'); 
+
+
+
+
+
+
+
+//---------main ------------
+const main = document.createElement('main');
+div.appendChild(main);
+
+
+
+
+
+
+
+//--------section1 left ---------
+const sectionL = document.createElement('section');
+main.appendChild(sectionL);
+sectionL.setAttribute('id','left-sect');
+
+
+
+
+
+
+
+// ------ul 생성 ----------------- 
+const ul = document.createElement('ul');
+sectionL.appendChild(ul);
+//-------li 반복문 해야함 ----------
+const li = document.createElement('li');
+ul.appendChild(li);
+const li2 = document.createElement('li');
+ul.appendChild(li2);
+const li3 = document.createElement('li');
+ul.appendChild(li3);
+const li4 = document.createElement('li');
+ul.appendChild(li4);
+const li5 = document.createElement('li');
+ul.appendChild(li5);
+
+
+
+
+
+
+//--------li text --------------- 
+li.textContent ="item-1";
+li2.textContent ="item-2";
+li3.textContent ="item-3";
+li4.textContent ="item-4";
+li5.textContent ="item-5";
+
+
+
+
+
+
+
+
+
+// ------section 2 right ---------
+const sectionR = document.createElement('section');
+main.appendChild(sectionR);
+sectionR.setAttribute('id','right-sect');
+
+
+
+// -------sectiond의 자식 ul -------
+const ulR = document.createElement('ul');
+sectionR.appendChild(ulR);
+
+
+
+
+// /section , /main , /div 
+
+
+
+
+
+  </script>
+</body>
+</html>
