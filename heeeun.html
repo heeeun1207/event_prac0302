@@ -7,17 +7,18 @@
   <title>Document</title>
   <style>
     * {margin:0px; padding:0px; box-sizing: border-box;}
+    body {overflow-x: hidden;}
+    ul {list-style-type: none;}
   </style>
 </head>
 <body>
   <script>
-//------------move-btn------------
+
+//------------aside------------
 const aside = document.createElement('aside');
 document.body.appendChild(aside); 
 aside.setAttribute('id', 'move-btn'); 
-
-
-
+aside.style.cssText="display:flex;justify-content: center; align-items: center;width: 200px;height: 200px;background-color: #fff;border-radius : 50%;position: fixed;bottom: 10px;left: 50vw;transform: translate(-50%, 0);"
 
 
 
@@ -30,17 +31,12 @@ h1.textContent="move!";
 
 
 
-
-
-
-
 //------------div id root -------
 const div = document.createElement('div');
 document.body.appendChild(div); 
 div.setAttribute('id', 'root'); 
-
-
-
+div.style.cssText=
+"background-color:cadetblue; width:100vw; height:100vh;display:flex;justify-content: center; align-items: center; "
 
 
 
@@ -48,6 +44,8 @@ div.setAttribute('id', 'root');
 //---------main ------------
 const main = document.createElement('main');
 div.appendChild(main);
+main.style.cssText=
+"width: 500px; height: 500px; border: 1px dotted black;display:flex;justify-content: center;align-items: center; "
 
 
 
@@ -59,9 +57,9 @@ div.appendChild(main);
 const sectionL = document.createElement('section');
 main.appendChild(sectionL);
 sectionL.setAttribute('id','left-sect');
-
-
-
+sectionL.style.cssText=
+"display:flex; justify-content: center;align-items: center; width:200px;height:450px; border: 1px soild black; "
+/* 왜????????이것만 테두리가 안나올까 */ 
 
 
 
@@ -69,43 +67,63 @@ sectionL.setAttribute('id','left-sect');
 // ------ul 생성 ----------------- 
 const ul = document.createElement('ul');
 sectionL.appendChild(ul);
-//-------li 반복문 해야함 ----------
-const li = document.createElement('li');
-ul.appendChild(li);
-const li2 = document.createElement('li');
-ul.appendChild(li2);
-const li3 = document.createElement('li');
-ul.appendChild(li3);
-const li4 = document.createElement('li');
-ul.appendChild(li4);
-const li5 = document.createElement('li');
-ul.appendChild(li5);
 
 
+//-------ul의 자식 li 5번반복 해야함 ----------
+for(let i=0; i<5; i++) {
+let makeLi = document.createElement('li');
+ul.appendChild(makeLi);
+if(i===0){
+makeLi.textContent="items-1"
+}
+else if (i === 1){
+makeLi.textContent="items-2"
+}
+else if (i === 2){
+makeLi.textContent="items-3"
+}
+else if (i === 3){
+makeLi.textContent="items-4"
+} else {
+makeLi.textContent="items-5"
+}
+makeLi.style.cssText=
+"width: 100%; height: 50px;background-color: #fff; border: 1px solid black;"
+};
 
+// const li = document.createElement('li');
+// ul.appendChild(li);
+// const li2 = document.createElement('li');
+// ul.appendChild(li2);
+// const li3 = document.createElement('li');
+// ul.appendChild(li3);
+// const li4 = document.createElement('li');
+// ul.appendChild(li4);
+// const li5 = document.createElement('li');
+// ul.appendChild(li5);
+
+
+// for(let i = 0; i<5; i++) {
+//   let litext = document.createTextNode('item-$');
+//   makeLi.appendChild(litext);  
+// };
 
 
 
 //--------li text --------------- 
-li.textContent ="item-1";
-li2.textContent ="item-2";
-li3.textContent ="item-3";
-li4.textContent ="item-4";
-li5.textContent ="item-5";
-
-
-
-
-
-
-
+// li.textContent ="item-1";
+// li2.textContent ="item-2";
+// li3.textContent ="item-3";
+// li4.textContent ="item-4";
+// li5.textContent ="item-5";
 
 
 // ------section 2 right ---------
 const sectionR = document.createElement('section');
 main.appendChild(sectionR);
 sectionR.setAttribute('id','right-sect');
-
+sectionR.style.cssText=
+"display:flex;justify-content: center;align-items: center;width:200px;height:450px; border: 1px solid blue;"
 
 
 // -------sectiond의 자식 ul -------
@@ -113,13 +131,7 @@ const ulR = document.createElement('ul');
 sectionR.appendChild(ulR);
 
 
-
-
 // /section , /main , /div 
-
-
-
-
 
   </script>
 </body>
